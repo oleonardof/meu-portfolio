@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Analista de Dados</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 shadow-sm z-10 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-orange-600 dark:text-orange-400">Leonardo <span class="text-orange-400 dark:text-orange-300">Silva</span></a>
+            <div class="flex items-center space-x-8">
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#about" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Sobre</a></li>
+                        <li><a href="#skills" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Habilidades</a></li>
+                        <li><a href="#projects" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Projetos</a></li>
+                        <li><a href="experience.html" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Experiência</a></li>
+                        <li><a href="#contact" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Contato</a></li>
+                    </ul>
+                </nav>
+                <button id="theme-toggle" class="text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-white transition">
+                    <span id="theme-toggle-icon">
+                        <i class="fas fa-moon text-xl"></i>
+                        <i class="fas fa-sun text-xl"></i>
+                    </span>
+                </button>
+                <button id="menuBtn" class="md:hidden text-orange-600 dark:text-orange-400">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+            <ul class="py-4 px-4 space-y-4">
+                <li><a href="#about" class="block hover:text-orange-500 dark:hover:text-orange-400 transition">Sobre</a></li>
+                <li><a href="#skills" class="block hover:text-orange-500 dark:hover:text-orange-400 transition">Habilidades</a></li>
+                <li><a href="#projects" class="block hover:text-orange-500 dark:hover:text-orange-400 transition">Projetos</a></li>
+                <li><a href="experience.html" class="hover:text-orange-500 dark:hover:text-orange-400 transition">Experiência</a></li>
+                <li><a href="#contact" class="block hover:text-orange-500 dark:hover:text-orange-400 transition">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-b from-orange-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Olá, eu sou <span class="text-orange-600 dark:text-orange-400">Leonardo Silva</span></h1>
+                <h2 class="text-2xl md:text-3xl text-orange-400 dark:text-orange-300 mb-6">Analista de Planejamento e Operações Pleno</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                    Transformando dados brutos em insights valiosos com Python, SQL e ferramentas de visualização.
+                    Apaixonado por descobrir padrões e contar histórias através dos dados.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg shadow-md transition">Contate-me</a>
+                    <a href="projects.html" class="border border-orange-600 text-orange-600 hover:bg-orange-50 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-gray-800 px-6 py-3 rounded-lg shadow-sm transition">Meus Projetos</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="assets/images/DataAnalyst.png"
+                         alt="Analista de Dados"
+                         class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white dark:border-gray-700 shadow-xl floating">
+                    <div class="absolute -bottom-5 -right-5 bg-white dark:bg-gray-700 p-3 rounded-full shadow-lg">
+                        <i class="fas fa-chart-line text-3xl text-orange-500 dark:text-orange-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 bg-white dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Sobre <span class="text-orange-600 dark:text-orange-400">Mim</span></h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="bg-orange-100 dark:bg-gray-800 p-6 rounded-2xl shadow-inner">
+                        <div class="chart-container bg-white dark:bg-gray-700 p-4 rounded-lg">
+                            <canvas id="chartLanguages"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Analista de Planejamento e Operações com Formação em Gestão Comercial</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Profissional em transição para a área de Planejamento e Operações, com experiência prévia em gestão administrativa e foco em dados.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Atualmente no segmento de Educação Superior, busco integrar minha bagagem em gestão com habilidades analíticas para impulsionar decisões estratégicas.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        Comprometido com a melhoria contínua e a inovação, acredito na importância de alinhar dados e estratégia para alcançar resultados significativos no ambiente educacional.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            <span>Graduação em Gestão Comercial</span>
+                        </div>
+                        <div class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-certificate mr-2"></i>
+                            <span>Certificação Google Cloud Computing Foundations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Minhas <span class="text-orange-600 dark:text-orange-400">Habilidades</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-database text-orange-500 dark:text-orange-400 mr-3"></i>
+                        <span>Análise de Dados</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Python (Pandas, NumPy)</span><span>35%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 35%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>SQL</span><span>40%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 40%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Excel Avançado</span><span>70%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-chart-pie text-orange-500 dark:text-orange-400 mr-3"></i>
+                        <span>Visualização de Dados</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Power BI</span><span>75%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Power Apps</span><span>40%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 40%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Matplotlib/Seaborn</span><span>35%</span></div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"><div class="skill-bar bg-orange-600 dark:bg-orange-500 h-2.5 rounded-full" style="width: 35%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex items-center">
+                    <div class="bg-orange-100 dark:bg-gray-700 p-3 rounded-full mr-4"><i class="fas fa-server text-orange-600 dark:text-orange-400 text-xl"></i></div>
+                    <div><h4 class="font-semibold">ETL</h4><p class="text-sm text-gray-500 dark:text-gray-400">Extração, Transformação e Carga de Dados</p></div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex items-center">
+                    <div class="bg-orange-100 dark:bg-gray-700 p-3 rounded-full mr-4"><i class="fas fa-project-diagram text-orange-600 dark:text-orange-400 text-xl"></i></div>
+                    <div><h4 class="font-semibold">Modelagem de Dados</h4><p class="text-sm text-gray-500 dark:text-gray-400">Criação de Modelos Relacionais e Dimensionais</p></div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm flex items-center">
+                    <div class="bg-orange-100 dark:bg-gray-700 p-3 rounded-full mr-4"><i class="fas fa-business-time text-orange-600 dark:text-orange-400 text-xl"></i></div>
+                    <div><h4 class="font-semibold">Business Intelligence</h4><p class="text-sm text-gray-500 dark:text-gray-400">Dashboards e KPIs</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-4 bg-white dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16">Meus <span class="text-orange-600 dark:text-orange-400">Projetos</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 project-link cursor-pointer"
+                    data-title="Análise de Vendas"
+                    data-description="Análise de Vendas em uma rede varejista usando Excel, ETL e Power BI."
+                    data-icon="fas fa-chart-bar"
+                    data-tech="Excel,ETL,Power BI"
+                    data-github="https://github.com/oleonardof"
+                    data-powerbi="https://app.powerbi.com/view?r=eyJrIjoiZTNmNThjNGEtOTU1NC00YmQyLTg1ODItNGQ3OGZjN2FiZTkwIiwidCI6ImQ1ODJiMWNhLTg2NzYtNDQ1NC1iZDNlLThiMmY3ZmYyNWUwMSJ9">
+
+                    <div class="h-48 bg-orange-100 dark:bg-gray-700 flex items-center justify-center"><i class="fas fa-chart-bar text-5xl text-orange-600 dark:text-orange-400"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Análise de Vendas</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Análise de Vendas em uma rede varejista usando Excel, ETL e Power BI.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">ETL</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">Power BI</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300"><i class="fas fa-external-link-alt"></i> Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700">
+                    <div class="h-48 bg-orange-100 dark:bg-gray-700 flex items-center justify-center"><i class="fas fa-map-marked-alt text-5xl text-orange-600 dark:text-orange-400"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Dados Demográficos</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Visualização interativa de dados populacionais por região usando Tableau.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">Tableau</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">ETL</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300"><i class="fab fa-github"></i> Código</a>
+                            <a href="#" class="text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700">
+                    <div class="h-48 bg-orange-100 dark:bg-gray-700 flex items-center justify-center"><i class="fas fa-comment-dollar text-5xl text-orange-600 dark:text-orange-400"></i></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Indicadores Econômicos</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Dashboard com indicadores macroeconômicos atualizados em tempo real.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">Streamlit</span>
+                            <span class="bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-300 text-xs px-3 py-1 rounded-full">APIs</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300"><i class="fab fa-github"></i> Código</a>
+                            <a href="project_detail.html" class="text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="projects.html" class="border border-orange-600 text-orange-600 hover:bg-orange-50 dark:border-orange-400 dark:text-orange-400 dark:hover:bg-gray-800 px-6 py-3 rounded-lg shadow-sm transition">Ver Todos os Projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-16">Entre em <span class="text-orange-600 dark:text-orange-400">Contato</span></h2>
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-orange-600 dark:bg-orange-700 text-white p-8">
+                        <h3 class="text-2xl font-semibold mb-6">Vamos conversar</h3>
+                        <p class="mb-8">Estou interessado em oportunidades de trabalho freelance e colaborações. Sinta-se à vontade para me enviar uma mensagem.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start"><i class="fas fa-envelope mt-1 mr-4"></i><div><h4 class="font-semibold">Email</h4><p class="text-orange-100">leonardofsilva17@outlook.com</p></div></div>
+                            <div class="flex items-start"><i class="fas fa-phone-alt mt-1 mr-4"></i><div><h4 class="font-semibold">Celular</h4><p class="text-orange-100">+55 (44) 98855-1396</p></div></div>
+                            <div class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-4"></i><div><h4 class="font-semibold">Localização</h4><p class="text-orange-100">Sarandi, Paraná, Brasil</p></div></div>
+                        </div>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="https://www.linkedin.com/in/oleonardof/" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-600 p-3 rounded-full w-10 h-10 flex items-center justify-center hover:bg-orange-100 transition"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/oleonardof" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-600 p-3 rounded-full w-10 h-10 flex items-center justify-center hover:bg-orange-100 transition"><i class="fab fa-github"></i></a>
+                            <a href="https://www.credly.com/users/oleonardof" target="_blank" rel="noopener noreferrer" class="bg-white text-orange-600 p-3 rounded-full w-10 h-10 flex items-center justify-center hover:bg-orange-100 transition"><i class="fas fa-certificate"></i></a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="contactForm" class="space-y-6">
+                            <input type="hidden" name="access_key" value="fa826d25-e467-4d5e-98dc-ac2f1c4fb3e7">
+                            <input type="hidden" name="from_name" value="Portfólio de Leonardo Silva">
+                            <input type="hidden" name="subject" value="Novo Contato do Portfólio">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nome</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Assunto</label>
+                                <input type="text" id="subject" name="assunto_usuario" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mensagem</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" required></textarea>
+                            </div>
+                            <button type="submit" id="submit-button" class="w-full bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                        <div id="formSuccess" class="hidden mt-4 p-4 bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 rounded-lg">
+                            Mensagem enviada com sucesso! Entrarei em contato em breve.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 dark:bg-black/50 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-orange-400">Leonardo Silva</a>
+                    <p class="mt-2 text-gray-400">Analista de Planejamento e Operações Pleno</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/oleonardof/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    <a href="https://github.com/oleonardof" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                    <a href="https://www.credly.com/users/oleonardof" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition"><i class="fas fa-certificate text-xl"></i></a>
+                    <a href="mailto:leonardofsilva17@outlook.com" class="text-gray-400 hover:text-white transition"><i class="fas fa-envelope text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 dark:border-gray-600 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© <span id="year"></span> Leonardo Silva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top-btn" class="hidden fixed bottom-5 right-5 bg-orange-600 hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-opacity duration-300 z-20">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
