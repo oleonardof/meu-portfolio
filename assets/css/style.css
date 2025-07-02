@@ -1,6 +1,11 @@
 /* Importação da base do Tailwind CSS (substitui o script da CDN) */
 @import "https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css";
 
+/* Adicione esta regra para rolagem suave em toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Seus estilos customizados da index.html e outras páginas */
 .chart-container {
     height: 300px;
