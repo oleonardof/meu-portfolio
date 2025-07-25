@@ -7,7 +7,7 @@
 
 **Visite o site ao vivo:** [Portfólio - Leonardo Silva](https://oleonardof.pages.dev/)
 
-![Screenshot do Portfólio](./assets/images/portfolio.png)
+![Screenshot do Portfólio](assets/images/portfolio.png)
 
 ---
 
