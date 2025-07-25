@@ -250,4 +250,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    // LÓGICA DO AVISO DE COOKIES
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-consent-button');
+
+    // Verifica se o cookie de consentimento existe
+    const hasConsent = getCookie('cookie_consent_accepted');
+
+    if (!hasConsent && banner) {
+        // Mostra o banner se não houver consentimento
+        setTimeout(() => {
+            banner.classList.add('active');
+        }, 500);
+    }
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            // Define o cookie para expirar em 1 ano
+            setCookie('cookie_consent_accepted', 'true', 365);
+            banner.classList.remove('active');
+        });
+    }
+
+    // Funções auxiliares para manipular cookies
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
 });

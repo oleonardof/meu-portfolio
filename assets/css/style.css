@@ -53,3 +53,52 @@ html.dark #theme-toggle-icon .fa-moon, html.dark #theme-toggle-icon-mobile .fa-m
     height: 100%;
     border: 0;
 }
+
+/* Estilos para o Aviso de Cookies */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1f2937; /* Cor escura (gray-800) */
+    color: #e5e7eb; /* Cor de texto clara (gray-200) */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cookie-consent-banner.active {
+    transform: translateY(0);
+}
+
+.cookie-consent-banner p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.cookie-consent-banner a {
+    color: #fb923c; /* Cor laranja (orange-400) */
+    text-decoration: underline;
+}
+
+.cookie-consent-button {
+    background-color: #ea580c; /* Cor laranja principal (orange-600) */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.cookie-consent-button:hover {
+    background-color: #c2410c; /* Cor laranja mais escura (orange-700) */
+}
